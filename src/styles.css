@@ -1,0 +1,284 @@
+body.homepage {
+    background-color: rgb(220, 220, 220);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+/*nav section*/
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+    justify-items: center;
+    align-items: center; 
+    height: 3rem;
+    padding: 10px;
+    background-color: rgb(220, 220, 220); 
+}
+
+button {
+    border: none;
+    width: auto; 
+    padding: 10px 20px; 
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 2px;
+    background: none;
+    transition: all 0.3s ease; 
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1); 
+    border-radius: 5px; 
+}
+
+/*content section*/
+#content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    gap: 20px; 
+    padding: 20px;
+}
+
+.col-one {
+    display: grid;
+    grid-template-rows: repeat(3, 1.5fr);
+    gap: 0px;
+}
+
+.col-two {
+    display: grid; 
+    grid-template-rows: auto auto;
+    gap: 0px; 
+    padding: 0px;
+}
+
+.col-three {
+    display: grid;
+    grid-template-rows: repeat(3, 1.5fr);
+    gap: 0px;
+    justify-items: end;
+}
+
+.intro {
+    margin: 20px;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    align-self: start;
+    justify-self: center;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 1.5; 
+}
+
+h1 {
+    font-size: 2.5em;
+    position: relative;
+    margin-top: 0px;
+}
+
+.homepage h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 1px;
+    background-color: rgb(97, 97, 97);
+}
+
+h6,
+h1 {
+    justify-self: center;
+}
+
+span {
+    font-size: 1em;
+}
+
+ul {
+    list-style: none;
+    margin-right: 20px;
+}
+
+img {
+    width: 10em; 
+    height: 10em; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover; 
+}
+
+.col-two .beverage-row {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 100px; 
+    grid-row: 2 / 3;
+}
+
+.col-two .beverage {
+    width: 10em; 
+    height: 10em; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover; 
+}
+
+/* Styles specific to the menu page*/
+body.menu-page {
+    font-family: Arial, sans-serif;
+    background-color: #d0d0d0;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-page #content {
+    min-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #b7b7b7;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-page #content h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.main-sections {
+    flex: 7; /* Wider width for main sections */
+}
+
+.menu-section,
+.drinks-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #efefef;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #555;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+.menu-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-section li {
+    padding: 10px 15px;
+    margin: 8px 0;
+    background-color: #e2e1e1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.menu-section li:hover {
+    background-color: #e6f7ff;
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.menu-section li,
+.drinks-section li {
+    background-color: #e2e1e1;
+}
+
+.drinks-section {
+    flex: 5; /* Narrower width for drinks section */
+    padding: 20px;  
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.drinks-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #555;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+.drinks-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.drinks-section li {
+    padding: 10px 15px;
+    margin: 8px 0;
+    background-color: #e2e1e1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.drinks-section li:hover {
+    background-color: #e6f7ff;
+    transform: scale(1.02);
+}
+
+/* Styles specific to the about page*/
+body.about-page {
+    font-family: Arial, sans-serif;
+    background-color: #dfdfdf;
+    margin: 0;
+    padding: 0;
+}
+
+.about-page #content {
+    width: 100%; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #e7e7e7;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    display: block;
+}
+
+.about-page #content h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.about-page #content p {
+    width: 100%; 
+    font-size: 1.2em;
+    line-height: 1.8; 
+    color: #555;
+    margin-bottom: 20px; 
+    text-align: left; 
+}
