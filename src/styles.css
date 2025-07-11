@@ -106,8 +106,8 @@ ul {
 }
 
 img {
-    width: 10em; 
-    height: 10em; 
+    max-width: 100%;
+    height: auto;
     border-radius: 10px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     object-fit: cover; 
@@ -281,4 +281,48 @@ body.about-page {
     color: #555;
     margin-bottom: 20px; 
     text-align: left; 
+}
+
+/*responsive design*/
+@media screen and (max-width: 768px) {
+  nav {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 5px;
+  }
+
+  #content {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .col-one,
+  .col-two,
+  .col-three {
+    grid-template-rows: none;
+    justify-items: center;
+    padding: 10px;
+  }
+
+  .col-two .beverage-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  img,
+  .col-two .beverage {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .menu-page #content,
+  .about-page #content {
+    padding: 20px;
+    min-width: auto;
+  }
 }
